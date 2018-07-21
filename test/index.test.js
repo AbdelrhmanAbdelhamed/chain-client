@@ -5,7 +5,7 @@ const ChainClient = require('../dist/chain-client.cjs.js');
 const fixtureChainClient = new ChainClient({
   rpcUrl: 'http://localhost:7545', // Ganache
   mnemonic: 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat', // Dev mnemonic
-  nodeDrivePath: `m/44'/60'/0'/0/0` // Default node path for key generation from seed (first node/account)
+  nodeDrivePath: "m/44'/60'/0'/0/0" // Default node path for key generation from seed (first node/account)
 });
 
 describe('new ChainWallet()', function() {
