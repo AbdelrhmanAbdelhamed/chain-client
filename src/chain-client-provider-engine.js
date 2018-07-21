@@ -117,8 +117,6 @@ export default class ChainClientProviderEngine extends ProviderEngine {
   }
 
   getConnectionType(rpcUrl) {
-    if (!rpcUrl) return undefined;
-
     const protocol = rpcUrl.split(':')[0];
     switch (protocol) {
       case 'http':
