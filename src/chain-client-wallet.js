@@ -6,7 +6,7 @@ import {
   DEFAULT_NODE_DERIVE_PATH
 } from './utils/constants';
 
-export default class ChainWallet {
+export default class ChainClientWallet {
   constructor({
     mnemonic = bip39.generateMnemonic(),
     nodeDrivePath = DEFAULT_NODE_DERIVE_PATH
