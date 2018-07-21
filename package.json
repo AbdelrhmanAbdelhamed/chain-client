@@ -1,0 +1,61 @@
+{
+  "name": "chain-client",
+  "version": "1.0.0",
+  "description": "An Ethereum Client With HD-Wallet, Web3 Services and Encryption",
+  "main": "lib/dist/chain-client.cjs.js",
+  "module": "lib/dist/chain-client.es.js",
+  "jsnext:main": "lib/dist/chain-client.es.js",
+  "files": [
+    "src",
+    "lib",
+    "README.md"
+  ],
+  "keywords": [
+    "chain-wallet",
+    "chain-client",
+    "blockchain",
+    "block-wallet",
+    "block-chain-wallet",
+    "blockchain-wallet",
+    "ethereum",
+    "eth",
+    "ethereum-wallet",
+    "light-wallet"
+  ],
+  "homepage": "https://github.com/AbdelrhmanAbdelhamed/chain-client",
+  "scripts": {
+    "lint": "eslint src ./test/*.test.js",
+    "lint:fix": "eslint src ./test/*.test.js --fix",
+    "pretest": "npm run build",
+    "test": "mocha ./lib/test/*.test.js --exit",
+    "posttest": "npm run lint",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm test",
+    "prebuild": "rm -rf lib/*",
+    "build": "npm run prebuild && rollup -c"
+  },
+  "author": "Abdelrahman Abdelhamed",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "ethereumjs-wallet": "^0.6.0",
+    "web3": "^1.0.0-beta.34",
+    "web3-provider-engine": "^14.0.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0",
+    "rollup": "^0.63.2",
+    "rollup-plugin-analyzer": "^2.1.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-progress": "^0.4.0",
+    "safe-buffer": "^5.1.2"
+  },
+  "repository": "chain-client",
+  "bugs": {
+    "url": "https://github.com/AbdelrhmanAbdelhamed/chain-client/issues"
+  }
+}
