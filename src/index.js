@@ -1,5 +1,5 @@
 import ChainClientProviderEngine from './chain-client-provider-engine.js';
-import ChainWallet from './chain-wallet.js';
+import ChainClientWallet from './chain-client-wallet.js';
 import * as Web3 from 'web3';
 
 import {
@@ -14,7 +14,7 @@ export default class ChainClient {
     mnemonic,
     nodeDrivePath
   } = {}) {
-    this.wallet = new ChainWallet({
+    this.wallet = new ChainClientWallet({
       mnemonic: mnemonic,
       nodeDrivePath: nodeDrivePath
     });
