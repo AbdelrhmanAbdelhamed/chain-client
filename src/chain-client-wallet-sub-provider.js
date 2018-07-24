@@ -9,7 +9,7 @@ export default class ChainClientWalletSubprovider extends HookedWalletEthTxSubpr
 
     options.getPrivateKey = (address, callback) => {
       if (address !== wallet.getAddress()) {
-        return callback('ChainWalletSubprovider Account not found');
+        return callback('ChainClientWalletSubprovider.options.getPrivateKey() - Account not found');
       }
 
       callback(null, wallet.getPrivateKey({

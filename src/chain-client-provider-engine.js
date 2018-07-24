@@ -26,7 +26,7 @@ export default class ChainClientProviderEngine extends ProviderEngine {
     provideFilter = true,
     provideFilterAndSubscription = true
   } = {}) {
-    if (!wallet) throw new Error('new ChainClientProviderEngine()', 'Must provide wallet parameter');
+    if (!wallet) throw new Error('new ChainClientProviderEngine() - Missing wallet parameter');
 
     // Init parent ProviderEngine class.
     super();
@@ -113,7 +113,7 @@ export default class ChainClientProviderEngine extends ProviderEngine {
       });
     }
 
-    throw new Error(`ChainClientProviderEngine - unrecognized connectionType "${connectionType}"`);
+    throw new Error(`ChainClientProviderEngine.createDataSubprovider() - unrecognized connectionType "${connectionType}"`);
   }
 
   getConnectionType(rpcUrl) {
@@ -126,7 +126,7 @@ export default class ChainClientProviderEngine extends ProviderEngine {
       case 'wss':
         return 'ws';
       default:
-        throw new Error(`ChainClientProviderEngine - unrecognized protocol in "${rpcUrl}"`);
+        throw new Error(`ChainClientProviderEngine.getConnectionType() - unrecognized protocol in "${rpcUrl}"`);
     }
   }
 }

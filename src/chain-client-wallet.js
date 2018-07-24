@@ -14,7 +14,7 @@ export default class ChainClientWallet {
     if (!mnemonic) {
       mnemonic = bip39.generateMnemonic();
     } else if (!bip39.validateMnemonic(mnemonic)) {
-      throw new Error('new ChainWallet()', 'Invalid mnemonic');
+      throw new Error('new ChainClientWallet() - Invalid mnemonic');
     }
     const seed = bip39.mnemonicToSeed(mnemonic);
     const root = hdkey.fromMasterSeed(seed);
