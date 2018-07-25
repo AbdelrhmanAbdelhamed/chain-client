@@ -1,6 +1,6 @@
 {
   "name": "@abdelrahman-abdelhamed/chain-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Ethereum Client Wrapper With HD-Wallet, Web3 Provider, Web3 Services and Encryption",
   "main": "lib/dist/chain-client.cjs.js",
   "module": "lib/dist/chain-client.es.js",
